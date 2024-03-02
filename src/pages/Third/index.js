@@ -1,20 +1,30 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import FormProject from '../../components/FormProject';
 import HeaderThird from '../../components/HeaderThird';
 import { Container, ContainerItens, ContainerProjects } from './styles';
 
 function Third() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5
+  });
+
   return (
-    <Container id="projetos">
+    <Container ref={ref} id="projetos">
       <HeaderThird />
       <ContainerItens>
-        <div className="black" />
+        {inView && <div className="black" />}
         <ContainerProjects>
           <div className="project-label">
-            <h1>PROJETOS</h1>
-            <FormProject />
+            {inView && (
+              <>
+                <h1 className="header">PROJETOS</h1>
+                <FormProject />
+              </>
+            )}
           </div>
         </ContainerProjects>
       </ContainerItens>

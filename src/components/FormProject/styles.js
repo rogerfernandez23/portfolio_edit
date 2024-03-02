@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeForm = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -10,6 +19,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerItens = styled.div`
+  opacity: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -18,6 +28,8 @@ export const ContainerItens = styled.div`
   background-color: white;
   height: 60vh;
   border-radius: 50px;
+  animation: ${fadeForm} 1s ease forwards;
+  animation-delay: 1.5s;
 
   .image {
     display: flex;

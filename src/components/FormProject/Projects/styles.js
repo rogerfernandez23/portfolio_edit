@@ -48,6 +48,8 @@ export const ContainerItens = styled.div`
   }
 
   h1 {
+    font-size: 44px;
+    font-weight: 900;
     margin-bottom: 20px;
   }
 

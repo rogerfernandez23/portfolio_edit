@@ -1,6 +1,24 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import BackImg from '../../assets/background.jpg';
+
+const fadeDiv = keyframes`
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
+
+const fadeText = keyframes`
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -16,6 +34,7 @@ export const ContainerItens = styled.div`
     background-color: #f39303;
     height: 16vh;
     width: 100%;
+    animation: ${fadeDiv} 1.5s ease forwards;
   }
 
   .container-text {
@@ -25,6 +44,7 @@ export const ContainerItens = styled.div`
   h1 {
     font-size: 46px;
     font-weight: 800;
+    animation: ${fadeText} 1.5s ease forwards;
   }
 
   p {
@@ -32,5 +52,6 @@ export const ContainerItens = styled.div`
     margin-top: 40px;
     font-size: 20px;
     font-weight: 200;
+    animation: ${fadeText} 1.5s ease forwards;
   }
 `;

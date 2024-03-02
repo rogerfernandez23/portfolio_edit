@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeInButtons = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -10,6 +21,12 @@ export const Container = styled.div`
 
 export const ContainerItens = styled.div`
   width: 450px;
+
+  a {
+    opacity: 0;
+    animation: ${fadeInButtons} 0.5s ease forwards;
+    animation-delay: 0.3s;
+  }
 
   .first {
     width: 25%;

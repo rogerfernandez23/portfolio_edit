@@ -1,7 +1,29 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import GitLogoOrange from '../../assets/git_logo_orange.png';
 import LinkLogoBlue from '../../assets/linkedin_logo_blue.png';
+
+const fadeInFromLeft = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+const fadeInButtons = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -33,11 +55,14 @@ export const ContainerItens = styled.div`
   width: 100%;
   min-height: 70vh;
   background-color: black;
+  animation: ${fadeInFromLeft} 1s ease-in-out;
 `;
 
 export const Buttons = styled.div`
+  animation: ${fadeInButtons} 2s ease-in-out;
   margin-bottom: 20px;
   cursor: pointer;
+
   .git-logo {
     width: 50px;
     transition: transform 0.6s ease;
