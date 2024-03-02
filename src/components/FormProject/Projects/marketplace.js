@@ -4,21 +4,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Docker from '../../../assets/docker_logo.png';
 import Figma from '../../../assets/figma_logo.png';
-import JS from '../../../assets/js_logo.png';
-import LinkI from '../../../assets/link_logo.png';
 import Base from '../../../assets/log.png';
-import Node from '../../../assets/node_logo.png';
-import Postgres from '../../../assets/postgres_logo.png';
-import ReactImg from '../../../assets/react_logo.png';
-import Git from '../../../assets/rep_logo.png';
 import { Container, ContainerItens } from './styles';
 
-function ProjectOne({ onClose }) {
+function ProjectMarket({ onClose }) {
   const linkFig =
-    'https://www.figma.com/file/YrYgEubnF3BEStZMIbvC35/Federa%C3%A7%C3%A3o-ACPBM-Site?type=design&t=GiyXXlMVI6N3SUr9-6';
-  const linkRep = 'https://github.com/rogerfernandez23/acpbm-site';
+    'https://www.figma.com/file/0R8gWb4hbQfOoBXIbRD1TA/Portf%C3%B3lio?type=design&t=FP8NSuZ5Txi9N0am-6';
 
   return (
     <Container>
@@ -28,38 +20,15 @@ function ProjectOne({ onClose }) {
             <img src={Base} className="background" />
           </div>
           <div className="contents">
-            <h1>FEDERAÇÃO ACPBM - SITE</h1>
+            <h1 className="market-h1">FEDERAÇÃO ACPBM - MARKETPLACE</h1>
             <div className="contents-header">
-              <p>Tecnologias:</p>
-              <p className="status">EM DESENVOLVIMENTO</p>
+              <p className="status status-market">EM BREVE</p>
             </div>
-            <div className="tec-image">
-              <img src={ReactImg} className="px" title="React" />
-              <img src={JS} className="px" title="Java-Script" />
-              <img src={Node} className="px" title="Node.js" />
-              <img src={Postgres} className="px" title="PostgeSQL" />
-              <img src={Docker} className="px" title="Docker" />
-            </div>
-
             <div className="links">
               <nav>
                 <img src={Figma} className="figma-image" />
                 <a href={linkFig} target="blank">
                   Projeto no Figma
-                </a>
-              </nav>
-
-              <nav>
-                <img src={LinkI} className="link-image" />
-                <a href={linkFig} target="blank">
-                  Deploy do projeto
-                </a>
-              </nav>
-
-              <nav>
-                <img src={Git} className="git-image" />
-                <a href={linkRep} target="blank">
-                  Repositório Git
                 </a>
               </nav>
             </div>
@@ -94,8 +63,8 @@ function ProjectOne({ onClose }) {
   );
 }
 
-export default ProjectOne;
+export default ProjectMarket;
 
-ProjectOne.propTypes = {
+ProjectMarket.propTypes = {
   onClose: PropTypes.func.isRequired
 };

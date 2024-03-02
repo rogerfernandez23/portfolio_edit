@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import Base from '../../assets/log.png';
+import ProjectApi from './Projects/apiBurguer';
 import ProjectOne from './Projects/facpbm';
+import ProjectMarket from './Projects/marketplace';
 import { Container, ContainerItens } from './styles';
 
 function FormProject() {
@@ -14,14 +16,28 @@ function FormProject() {
   });
 
   const [showProject, setShowProject] = useState(false);
+  const [showMarket, setShowMarket] = useState(false);
+  const [showThird, setShowThird] = useState(false);
 
   const closeProject = () => {
     setShowProject(false);
+    setShowMarket(false);
+    setShowThird(false);
     document.body.style.overflow = '';
+  };
+
+  const openMarket = () => {
+    setShowMarket(true);
+    document.body.style.overflow = 'hidden';
   };
 
   const openProject = () => {
     setShowProject(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const openThird = () => {
+    setShowThird(true);
     document.body.style.overflow = 'hidden';
   };
 
@@ -45,7 +61,7 @@ function FormProject() {
             <div className="contents">
               <h2>MARKETPLACE ACPBM</h2>
               <h3>EM BREVE</h3>
-              <button className="btn-a" onClick={openProject}>
+              <button className="btn-a" onClick={openMarket}>
                 VER DETALHES
               </button>
             </div>
@@ -56,12 +72,14 @@ function FormProject() {
             </div>
             <div className="contents">
               <h2>API DE PEDIDOS</h2>
-              <button onClick={openProject}>VER DETALHES</button>
+              <button onClick={openThird}>VER DETALHES</button>
             </div>
           </ContainerItens>
         </>
       )}
       {showProject && <ProjectOne onClose={closeProject} />}
+      {showMarket && <ProjectMarket onClose={closeProject} />}
+      {showThird && <ProjectApi onClose={closeProject} />}
     </Container>
   );
 }

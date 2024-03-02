@@ -45,10 +45,23 @@ export const ContainerItens = styled.div`
 
   .contents {
     padding: 0 25px;
+    width: 60%;
+  }
+
+  .contents-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   h1 {
     font-size: 44px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+
+  .market-h1 {
+    font-size: 34px;
     font-weight: 900;
     margin-bottom: 20px;
   }
@@ -61,6 +74,29 @@ export const ContainerItens = styled.div`
     font-size: 16px;
     font-weight: 200;
     text-align: justify;
+  }
+
+  .status {
+    font-size: 8px;
+    font-weight: 800;
+    text-align: justify;
+    color: #11a5f5;
+    border: 2px solid #11a5f5;
+    border-radius: 16px;
+    padding: 3px;
+  }
+
+  .status-market {
+    font-size: 12px;
+    padding: 6px;
+    color: red;
+    border: 2px solid red;
+    margin-bottom: 50px;
+  }
+
+  .-api {
+    color: green;
+    border: 2px solid green;
   }
 
   button {
