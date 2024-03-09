@@ -1,8 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import LogoDev from '../../assets/icon_2.png';
-import { Container, ContainerItens } from './styles';
+import { Container } from './styles';
 
 function HeaderSecond() {
   const { ref, inView } = useInView({
@@ -10,14 +9,7 @@ function HeaderSecond() {
     threshold: 0.3
   });
 
-  return (
-    <Container ref={ref}>
-      {inView && <div className="black" />}
-      <ContainerItens>
-        {inView && <img src={LogoDev} alt="logo-dev" />}
-      </ContainerItens>
-    </Container>
-  );
+  return <Container ref={ref}>{inView && <div className="black" />}</Container>;
 }
 
 export default HeaderSecond;

@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-import BackImg from '../../assets/background.jpg';
+import breakepoints from '../../styles/breakepoints';
 
 const fadeInName = keyframes`
   0% {
@@ -27,7 +27,10 @@ const fadeInWork = keyframes`
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  background-image: url(${BackImg});
+
+  @media ${breakepoints.md} {
+    flex-direction: column;
+  }
 `;
 
 export const ContainerItens = styled.div`
@@ -36,9 +39,23 @@ export const ContainerItens = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media ${breakepoints.md} {
+    padding: none;
+  }
+
   .container-text {
     margin-top: 80px;
     margin-left: 100px;
+
+    @media ${breakepoints.in} {
+      margin-left: 30px;
+      padding: 0px;
+    }
+
+    @media ${breakepoints.sm} {
+      margin-left: 0px;
+      padding: 0px;
+    }
   }
 
   p {
@@ -48,6 +65,10 @@ export const ContainerItens = styled.div`
     opacity: 0;
     animation: ${fadeInName} 0.5s ease forwards;
     animation-delay: 0.5s;
+
+    @media ${breakepoints.md} {
+      font-size: 12px;
+    }
   }
 
   h1 {
@@ -57,6 +78,22 @@ export const ContainerItens = styled.div`
     opacity: 0;
     animation: ${fadeInName} 0.5s ease forwards;
     animation-delay: 1s;
+
+    @media ${breakepoints.bg} {
+      font-size: 80px;
+    }
+
+    @media ${breakepoints.smf} {
+      font-size: 60px;
+    }
+
+    @media ${breakepoints.sm} {
+      font-size: 48px;
+    }
+
+    @media ${breakepoints.mn} {
+      font-size: 44px;
+    }
   }
 
   h2 {
@@ -71,5 +108,27 @@ export const ContainerItens = styled.div`
     animation: ${fadeInWork} 3s steps(44) forwards;
     animation-delay: 1.5s;
     border-right: 2px solid transparent;
+
+    @media ${breakepoints.bg} {
+      font-size: 34px;
+      margin-top: 10px;
+    }
+
+    @media ${breakepoints.md} {
+      font-size: 32px;
+    }
+
+    @media ${breakepoints.smf} {
+      font-size: 24px;
+    }
+
+    @media ${breakepoints.sm} {
+      font-size: 22px;
+      margin-top: 0;
+    }
+
+    @media ${breakepoints.mn} {
+      font-size: 20px;
+    }
   }
 `;

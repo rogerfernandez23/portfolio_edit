@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
+import breakepoints from '../../styles/breakepoints';
+
 const fadeInButtons = keyframes`
   0% {
     opacity: 0;
@@ -15,12 +17,22 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: end;
-  align-items: center;
   max-height: 18vh;
+
+  @media ${breakepoints.in} {
+    justify-content: end;
+  }
+
+  @media ${breakepoints.md} {
+    justify-content: center;
+    margin-top: 20px;
+  }
 `;
 
 export const ContainerItens = styled.div`
-  width: 450px;
+  @media ${breakepoints.md} {
+    display: flex;
+  }
 
   a {
     opacity: 0;
@@ -29,7 +41,7 @@ export const ContainerItens = styled.div`
   }
 
   .first {
-    width: 25%;
+    width: 120px;
     height: 30px;
     border-radius: 18px;
     border: none;
@@ -40,6 +52,22 @@ export const ContainerItens = styled.div`
     transition-duration: 0.5s;
     font-size: 16px;
     font-weight: 500;
+
+    @media ${breakepoints.bg} {
+      width: 100px;
+      height: 25px;
+      font-size: 12px;
+    }
+
+    @media ${breakepoints.md} {
+      width: 120px;
+      height: 25px;
+    }
+
+    @media ${breakepoints.sm} {
+      width: 80px;
+      height: 25px;
+    }
 
     &:hover {
       opacity: 0.9;
@@ -52,7 +80,7 @@ export const ContainerItens = styled.div`
   }
 
   .second {
-    width: 25%;
+    width: 120px;
     height: 30px;
     margin-left: 30px;
     border-radius: 18px;
@@ -64,6 +92,22 @@ export const ContainerItens = styled.div`
     transition-duration: 0.5s;
     font-size: 16px;
     font-weight: 500;
+
+    @media ${breakepoints.bg} {
+      width: 100px;
+      height: 25px;
+      font-size: 12px;
+    }
+
+    @media ${breakepoints.md} {
+      width: 120px;
+      height: 25px;
+    }
+
+    @media ${breakepoints.sm} {
+      width: 80px;
+      height: 25px;
+    }
 
     &:hover {
       opacity: 0.9;
@@ -76,7 +120,7 @@ export const ContainerItens = styled.div`
   }
 
   .third {
-    width: 25%;
+    width: 120px;
     height: 30px;
     margin-left: 30px;
     border-radius: 18px;
@@ -88,6 +132,22 @@ export const ContainerItens = styled.div`
     transition-duration: 0.5s;
     font-size: 16px;
     font-weight: 500;
+
+    @media ${breakepoints.bg} {
+      width: 100px;
+      height: 25px;
+      font-size: 12px;
+    }
+
+    @media ${breakepoints.md} {
+      width: 120px;
+      height: 25px;
+    }
+
+    @media ${breakepoints.sm} {
+      width: 80px;
+      height: 25px;
+    }
 
     &:hover {
       opacity: 0.9;

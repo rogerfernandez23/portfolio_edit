@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
+import breakepoints from '../../styles/breakepoints';
+
 const fadeForm = keyframes`
   0% {
     opacity: 0;
@@ -16,6 +18,12 @@ export const Container = styled.div`
   gap: 20px;
   width: 100%;
   margin-top: 20px;
+
+  @media ${breakepoints.bg} {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
 `;
 
 export const ContainerItens = styled.div`
@@ -31,19 +39,41 @@ export const ContainerItens = styled.div`
   animation: ${fadeForm} 1s ease forwards;
   animation-delay: 1.5s;
 
+  @media ${breakepoints.bg} {
+    width: 60%;
+    height: 50vh;
+  }
+
+  @media ${breakepoints.in} {
+    width: 70%;
+  }
+
+  @media ${breakepoints.md} {
+    width: 80%;
+  }
+
+  @media ${breakepoints.sm} {
+    width: 100%;
+  }
+
   .image {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    width: 75%;
-    height: 28vh;
-    margin-bottom: 15px;
+    width: 70%;
+    height: 24vh;
+    margin-bottom: 30px;
+
+    @media ${breakepoints.sm} {
+      height: 20vh;
+    }
   }
 
   .background {
     width: 100%;
+    max-height: 26vh;
   }
+
   .contents {
     display: flex;
     flex-direction: column;
@@ -60,14 +90,11 @@ export const ContainerItens = styled.div`
     width: 40%;
   }
 
-  h3 {
+  p {
+    font-size: 12px;
+    font-weight: 400;
     text-align: center;
-    font-size: 8px;
-    color: red;
-    border: red 2px solid;
-    border-radius: 10px;
-    font-weight: 900;
-    width: 20%;
+    padding: 0 10px;
   }
 
   button {
@@ -81,7 +108,11 @@ export const ContainerItens = styled.div`
     font-size: 14px;
     font-weight: 600;
     transition: transform 0.2s ease;
-    margin-top: 50px;
+    margin-top: 10px;
+
+    @media ${breakepoints.in} {
+      margin-top: 20px;
+    }
 
     &:hover {
       transform: scale(1.02);
@@ -91,9 +122,5 @@ export const ContainerItens = styled.div`
     &:active {
       opacity: 0.8;
     }
-  }
-
-  .btn-a {
-    margin-top: 30px;
   }
 `;

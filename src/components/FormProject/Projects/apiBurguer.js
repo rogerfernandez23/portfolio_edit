@@ -6,7 +6,7 @@ import React from 'react';
 
 import JS from '../../../assets/js_logo.png';
 import LinkI from '../../../assets/link_logo.png';
-import Base from '../../../assets/log.png';
+import Base from '../../../assets/model_api.jpg';
 import Node from '../../../assets/node_logo.png';
 import ReactImg from '../../../assets/react_logo.png';
 import Git from '../../../assets/rep_logo.png';

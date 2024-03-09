@@ -4,20 +4,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import CoverMarket from '../../../assets/banner.png';
 import Figma from '../../../assets/figma_logo.png';
-import Base from '../../../assets/log.png';
 import { Container, ContainerItens } from './styles';
 
 function ProjectMarket({ onClose }) {
   const linkFig =
-    'https://www.figma.com/file/0R8gWb4hbQfOoBXIbRD1TA/Portf%C3%B3lio?type=design&t=FP8NSuZ5Txi9N0am-6';
-
+    'https://www.figma.com/file/sUuaMUm37ASWKBTYlvfL3A/Federa%C3%A7%C3%A3o-ACPBM---Marketplace?type=design&t=fOijp0i7XRsgaRT1-6';
   return (
     <Container>
       <ContainerItens>
         <div className="container">
           <div className="image">
-            <img src={Base} className="background" />
+            <img src={CoverMarket} className="background" />
           </div>
           <div className="contents">
             <h1 className="market-h1">FEDERAÇÃO ACPBM - MARKETPLACE</h1>

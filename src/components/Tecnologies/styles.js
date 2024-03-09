@@ -1,6 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import styled, { keyframes } from 'styled-components';
 
+import breakepoints from '../../styles/breakepoints';
+
 const fadeLogos = keyframes`
   0% {
     opacity: 0;
@@ -18,12 +20,26 @@ export const Container = styled.div`
   margin-top: 25px;
   gap: 20px;
   margin-left: 5px;
+  margin-bottom: 50px;
+
+  @media ${breakepoints.md} {
+    margin-bottom: 34px;
+  }
+
+  @media ${breakepoints.smf} {
+    margin-bottom: 52px;
+    gap: 15px;
+  }
 
   img {
     opacity: 0;
     width: 30px;
     cursor: pointer;
     animation: ${fadeLogos} 1.5s ease forwards;
+
+    @media ${breakepoints.sm} {
+      width: 20px;
+    }
   }
 
   .js {

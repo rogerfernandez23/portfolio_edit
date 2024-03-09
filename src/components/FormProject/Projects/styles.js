@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
+import breakepoints from '../../../styles/breakepoints';
+
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -38,14 +40,34 @@ export const ContainerItens = styled.div`
   height: 90%;
   animation: ${fadeIn} 0.4s ease-out;
 
+  @media ${breakepoints.smd} {
+    transform: translate(-50%, -32%);
+    height: initial;
+    min-height: 100%;
+  }
+
   .container {
     display: flex;
     flex-direction: row;
+
+    @media ${breakepoints.smd} {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .contents {
     padding: 0 25px;
     width: 60%;
+
+    @media ${breakepoints.smd} {
+      width: 80%;
+      padding: 0px;
+    }
+
+    @media ${breakepoints.sm} {
+      width: 100%;
+    }
   }
 
   .contents-header {
@@ -58,12 +80,40 @@ export const ContainerItens = styled.div`
     font-size: 44px;
     font-weight: 900;
     margin-bottom: 20px;
+
+    @media ${breakepoints.al} {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    @media ${breakepoints.bg} {
+      font-size: 28px;
+    }
+
+    @media ${breakepoints.in} {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    @media ${breakepoints.smd} {
+      font-size: 24px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    @media ${breakepoints.sm} {
+      font-size: 20px;
+    }
   }
 
   .market-h1 {
     font-size: 34px;
     font-weight: 900;
     margin-bottom: 20px;
+
+    @media ${breakepoints.al} {
+      font-size: 26px;
+    }
   }
 
   h2 {
@@ -74,6 +124,14 @@ export const ContainerItens = styled.div`
     font-size: 16px;
     font-weight: 200;
     text-align: justify;
+
+    @media ${breakepoints.al} {
+      font-size: 14px;
+    }
+
+    @media ${breakepoints.md} {
+      font-size: 13px;
+    }
   }
 
   .status {
@@ -84,6 +142,10 @@ export const ContainerItens = styled.div`
     border: 2px solid #11a5f5;
     border-radius: 16px;
     padding: 3px;
+
+    @media ${breakepoints.md} {
+      font-size: 7px;
+    }
   }
 
   .status-market {
@@ -112,6 +174,17 @@ export const ContainerItens = styled.div`
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
+
+    @media ${breakepoints.smd} {
+      position: absolute;
+      background-color: gray;
+      color: white;
+      width: 20px;
+      height: 20px;
+      font-size: 16px;
+      top: -1%;
+      right: -2%;
+    }
   }
 
   // IMAGE PROJECT
@@ -120,10 +193,32 @@ export const ContainerItens = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    margin-top: 15px;
     width: 400px;
-    height: 280px;
+    height: 240px;
     color: white;
+
+    @media ${breakepoints.al} {
+      width: 350px;
+      height: 250px;
+    }
+
+    @media ${breakepoints.in} {
+      width: 360px;
+      height: 250px;
+    }
+
+    @media ${breakepoints.smd} {
+      width: 380px;
+      height: 250px;
+      margin-bottom: 30px;
+    }
+
+    @media ${breakepoints.sm} {
+      width: 300px;
+      height: 200px;
+      margin-bottom: 30px;
+    }
   }
 
   .background {
@@ -166,12 +261,22 @@ export const ContainerItens = styled.div`
     flex-direction: row;
     gap: 25px;
     cursor: pointer;
+
+    @media ${breakepoints.sm} {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
   }
 
   .px {
     width: 30px;
     margin-top: 16px;
     margin-bottom: 30px;
+
+    @media ${breakepoints.al} {
+      width: 25px;
+      margin-top: 20px;
+    }
   }
 
   // DESCRIPTION

@@ -1,15 +1,15 @@
 import React from 'react';
 
-import LogoDev from '../../assets/dev_icon.png';
 import GitLogo from '../../assets/git_logo.png';
 import LinkLogo from '../../assets/linkedin_logo.png';
 import { Container, ContainerLogo, ContainerItens, Buttons } from './styles';
+import VideoLogo from './videoLogo';
 
 function HeaderVertical() {
   return (
     <Container>
       <ContainerLogo>
-        <img className="logo-dev" src={LogoDev} alt="dev-logo" />
+        <VideoLogo />
       </ContainerLogo>
       <ContainerItens>
         <Buttons>

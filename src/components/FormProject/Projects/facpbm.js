@@ -8,7 +8,7 @@ import Docker from '../../../assets/docker_logo.png';
 import Figma from '../../../assets/figma_logo.png';
 import JS from '../../../assets/js_logo.png';
 import LinkI from '../../../assets/link_logo.png';
-import Base from '../../../assets/log.png';
+import Base from '../../../assets/model.jpg';
 import Node from '../../../assets/node_logo.png';
 import Postgres from '../../../assets/postgres_logo.png';
 import ReactImg from '../../../assets/react_logo.png';

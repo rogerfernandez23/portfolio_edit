@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 import GitLogoOrange from '../../assets/git_logo_orange.png';
 import LinkLogoBlue from '../../assets/linkedin_logo_blue.png';
+import breakepoints from '../../styles/breakepoints';
 
 const fadeInFromLeft = keyframes`
   0% {
@@ -30,6 +31,18 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+
+  @media ${breakepoints.md} {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+  }
+
+  @media ${breakepoints.in} {
+    align-items: initial;
+    justify-content: initial;
+  }
 `;
 
 export const ContainerLogo = styled.div`
@@ -41,8 +54,30 @@ export const ContainerLogo = styled.div`
   height: 30vh;
   cursor: pointer;
 
+  @media ${breakepoints.md} {
+    height: 15vh;
+    width: 25%;
+  }
+
+  @media ${breakepoints.sm} {
+    width: 30%;
+    height: 12vh;
+  }
+
   .logo-dev {
     width: 200px;
+
+    @media ${breakepoints.in} {
+      width: 150px;
+    }
+
+    @media ${breakepoints.md} {
+      width: 120px;
+    }
+
+    @media ${breakepoints.sm} {
+      width: 80px;
+    }
   }
 `;
 
@@ -53,9 +88,20 @@ export const ContainerItens = styled.div`
   align-items: end;
   gap: 30px;
   width: 100%;
-  min-height: 70vh;
+  height: 70vh;
   background-color: black;
   animation: ${fadeInFromLeft} 1s ease-in-out;
+
+  @media ${breakepoints.md} {
+    height: 16vh;
+    align-items: center;
+    justify-content: end;
+    padding: 0 25px;
+  }
+
+  @media ${breakepoints.sm} {
+    height: 12vh;
+  }
 `;
 
 export const Buttons = styled.div`
@@ -63,9 +109,25 @@ export const Buttons = styled.div`
   margin-bottom: 20px;
   cursor: pointer;
 
+  @media ${breakepoints.in} {
+    margin-bottom: 40px;
+  }
+
+  @media ${breakepoints.md} {
+    margin-bottom: 0px;
+  }
+
   .git-logo {
     width: 50px;
     transition: transform 0.6s ease;
+
+    @media ${breakepoints.in} {
+      width: 40px;
+    }
+
+    @media ${breakepoints.sm} {
+      width: 30px;
+    }
 
     &:hover {
       content: url(${GitLogoOrange});
@@ -82,6 +144,14 @@ export const Buttons = styled.div`
     width: 50px;
     margin-left: 20px;
     transition: transform 0.6s ease;
+
+    @media ${breakepoints.in} {
+      width: 40px;
+    }
+
+    @media ${breakepoints.sm} {
+      width: 30px;
+    }
 
     &:hover {
       content: url(${LinkLogoBlue});

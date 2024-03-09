@@ -3,7 +3,9 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import Base from '../../assets/log.png';
+import CoverMarket from '../../assets/banner.png';
+import CoverApi from '../../assets/model_api.jpg';
+import Cover from '../../assets/model.jpg';
 import ProjectApi from './Projects/apiBurguer';
 import ProjectOne from './Projects/facpbm';
 import ProjectMarket from './Projects/marketplace';
@@ -47,20 +49,31 @@ function FormProject() {
         <>
           <ContainerItens>
             <div className="image">
-              <img src={Base} className="background" />
+              <img src={Cover} className="background" />
             </div>
             <div className="contents">
               <h2>FEDERAÇÃO ACPBM SITE</h2>
+              <p>
+                Projeto que reúne todas as funcionalidades desta federação em um
+                único local. Um gerenciador de <b>equipes</b>,{' '}
+                <b>campeonatos</b>,<b> notícias</b> e <b>informações</b> de uma
+                federação que organiza campeonatos.
+              </p>
               <button onClick={openProject}>VER DETALHES</button>
             </div>
           </ContainerItens>
           <ContainerItens>
             <div className="image">
-              <p />
+              <img src={CoverMarket} className="background" />
             </div>
             <div className="contents">
               <h2>MARKETPLACE ACPBM</h2>
-              <h3>EM BREVE</h3>
+              <p>
+                Futura aplicação de plataforma de venda de produtos, utilizando
+                conceitos de cadastro e exibição de produtos, com métodos de
+                carrinho e pagamento on-line. A ser desenvolvida com{' '}
+                <b>React</b> e <b>Typescript</b>.
+              </p>
               <button className="btn-a" onClick={openMarket}>
                 VER DETALHES
               </button>
@@ -68,10 +81,15 @@ function FormProject() {
           </ContainerItens>
           <ContainerItens>
             <div className="image">
-              <p />
+              <img src={CoverApi} className="background" />
             </div>
             <div className="contents">
-              <h2>API DE PEDIDOS</h2>
+              <h2>API DE PEDIDOS HAMBURGUERIA</h2>
+              <p>
+                Uma aplicação em <b>React</b> que faz cadastros de pedidos de
+                uma Lanchonete, com rotas em back-end utilizando <b>Node.js</b>{' '}
+                aplicando o conceito de CRUD.
+              </p>
               <button onClick={openThird}>VER DETALHES</button>
             </div>
           </ContainerItens>

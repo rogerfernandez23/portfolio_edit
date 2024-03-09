@@ -1,4 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 import styled, { keyframes } from 'styled-components';
+
+import breakepoints from '../../styles/breakepoints';
 
 const fadeDiv = keyframes`
   0% {
@@ -12,37 +15,19 @@ const fadeDiv = keyframes`
   }
 `;
 
-const fadeLogo = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 12%;
+
+  @media ${breakepoints.smd} {
+    width: 20%;
+  }
 
   .black {
     background-color: none;
+    min-height: 100%;
     animation: ${fadeDiv} 1s ease forwards;
     animation-delay: 1.5s;
-  }
-`;
-
-export const ContainerItens = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30vh;
-
-  img {
-    opacity: 0;
-    width: 100px;
-    animation: ${fadeLogo} 1s ease forwards;
-    animation-delay: 2.5s;
   }
 `;

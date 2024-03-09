@@ -21,7 +21,7 @@ function Third() {
           <div className="project-label">
             {inView && (
               <>
-                <h1 className="header">PROJETOS</h1>
+                <h1 className="h1">PROJETOS</h1>
                 <FormProject />
               </>
             )}
