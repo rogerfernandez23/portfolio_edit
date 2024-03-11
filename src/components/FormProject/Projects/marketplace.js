@@ -4,8 +4,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CoverMarket from '../../../assets/banner.png';
 import Figma from '../../../assets/figma_logo.png';
+import CoverMarket from '../../../assets/marketplace.jpg';
 import { Container, ContainerItens } from './styles';
 
 function ProjectMarket({ onClose }) {

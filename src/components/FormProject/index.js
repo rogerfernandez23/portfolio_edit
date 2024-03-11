@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import CoverMarket from '../../assets/banner.png';
+import CoverMarket from '../../assets/marketplace.jpg';
 import CoverApi from '../../assets/model_api.jpg';
 import Cover from '../../assets/model.jpg';
 import ProjectApi from './Projects/apiBurguer';
