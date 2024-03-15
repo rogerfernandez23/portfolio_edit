@@ -65,14 +65,14 @@ export const ContainerLogo = styled.div`
   }
 
   .logo-dev {
-    width: 200px;
+    width: 160px;
 
     @media ${breakepoints.in} {
-      width: 150px;
+      width: 130px;
     }
 
     @media ${breakepoints.md} {
-      width: 120px;
+      width: 100px;
     }
 
     @media ${breakepoints.sm} {
