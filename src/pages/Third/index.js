@@ -9,7 +9,7 @@ import { Container, ContainerItens, ContainerProjects } from './styles';
 function Third() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5
+    threshold: 0.3
   });
 
   return (

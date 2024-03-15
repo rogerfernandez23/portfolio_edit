@@ -54,10 +54,10 @@ function FormProject() {
             <div className="contents">
               <h2>FEDERAÇÃO ACPBM SITE</h2>
               <p>
-                Projeto que reúne todas as funcionalidades desta federação em um
-                único local. Um gerenciador de <b>equipes</b>,{' '}
-                <b>campeonatos</b>,<b> notícias</b> e <b>informações</b> de uma
-                federação que organiza campeonatos.
+                Projeto que reúne as funcionalidades de uma federação
+                organizadora de competições em um único local. Um gerenciador de{' '}
+                <b>equipes</b>, <b>campeonatos</b>,<b> notícias</b> e{' '}
+                <b>informações</b> feito para cada integrante e visitante.
               </p>
               <button onClick={openProject}>VER DETALHES</button>
             </div>

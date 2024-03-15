@@ -2,6 +2,7 @@
 import React from 'react';
 
 import Footer from '../../components/Footer';
+import ScrollToTop from '../../components/ScrollToTop';
 import Main from '../Main';
 import Second from '../Second';
 import Third from '../Third';
@@ -13,6 +14,7 @@ function Home() {
       <Main />
       <Second />
       <Third />
+      <ScrollToTop />
       <Footer />
     </Container>
   );

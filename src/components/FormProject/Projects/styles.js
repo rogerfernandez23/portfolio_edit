@@ -117,7 +117,15 @@ export const ContainerItens = styled.div`
   }
 
   h2 {
-    margin-top: 40px;
+    margin-top: 10px;
+
+    @media ${breakepoints.al} {
+      margin-top: 0px;
+    }
+
+    @media ${breakepoints.smd} {
+      margin-top: 10px;
+    }
   }
 
   p {
@@ -126,11 +134,26 @@ export const ContainerItens = styled.div`
     text-align: justify;
 
     @media ${breakepoints.al} {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     @media ${breakepoints.md} {
-      font-size: 13px;
+      font-size: 12px;
+    }
+  }
+
+  .description {
+    font-size: 13.4px;
+    font-weight: 400;
+    text-align: justify;
+    margin-top: 8px;
+
+    @media ${breakepoints.al} {
+      font-size: 11px;
+    }
+
+    @media ${breakepoints.md} {
+      font-size: 10px;
     }
   }
 

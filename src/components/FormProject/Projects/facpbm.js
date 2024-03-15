@@ -1,3 +1,4 @@
+/* eslint-disable react/style-prop-object */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/button-has-type */
@@ -19,6 +20,7 @@ function ProjectOne({ onClose }) {
   const linkFig =
     'https://www.figma.com/file/YrYgEubnF3BEStZMIbvC35/Federa%C3%A7%C3%A3o-ACPBM-Site?type=design&t=GiyXXlMVI6N3SUr9-6';
   const linkRep = 'https://github.com/rogerfernandez23/acpbm-site';
+  const deploy = 'https://facpbm.netifly.app';
 
   return (
     <Container>
@@ -51,7 +53,7 @@ function ProjectOne({ onClose }) {
 
               <nav>
                 <img src={LinkI} className="link-image" />
-                <a href={linkFig} target="blank">
+                <a href={deploy} target="blank">
                   Deploy do projeto
                 </a>
               </nav>
@@ -69,24 +71,39 @@ function ProjectOne({ onClose }) {
 
         <div className="text">
           <h2>DESCRIÇÃO</h2>
-          <p>
+          <p className="description">
+            A <b>Federação ACPBM</b> surgiu da iniciativa de um grupo de amigos
+            para gerenciar e organizar campeonatos a partir da plataforma
+            popular de fantasy game: Cartola FC. Com o aumento do número de
+            membros, equipes e campeonatos com o passar dos anos, tornou-se
+            necessário o desejo de simplificar a gestão, já fragmentada em
+            várias ferramentas diferentes. <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. <br />
+            Com isso em mente, desenvolvi esta aplicação com o objetivo de
+            resolver os desafios do gerenciamento dessas equipes e campeonatos
+            de maneira prática. Inicialmente, ela utiliza apenas a imagem da
+            ACPBM, mas há planos de expansão para transformá-la em um site com
+            <b> múltiplos usuários</b> e <b>organizadores distintos</b>. <br />
             <br />
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            Para garantir um gerenciamento eficiente, cada usuário pode criar
+            seu próprio login e senha <b>exclusivos</b>. Após a aprovação, terão
+            acesso ao seu próprio perfil, com a capacidade de sempre fazer
+            alterações conforme necessário. Para os administradores, há acesso
+            privilegiado para cadastrar equipes aos novos usuários, além de
+            <b> criar</b>, <b>editar</b> e <b>excluir</b> equipes de maneira
+            simples, rápida e prática. Para os visitantes regulares, o site
+            oferece acesso a notícias e informações relevantes sobre a federação
+            e futuramente, sobre o mundo do futebol. <br />
+            <br />E olhando para o futuro, está prevista a implementação de
+            recursos adicionais, como a visualização de tabelas, jogos e
+            detalhes específicos de equipes e campeonatos. Para todo o
+            detalhamento minucioso sobre as tecnologias e funcionalidades ativas
+            e futuras, convido você a acessar e ler o <b>README</b> deste
+            projeto no{' '}
+            <a href={linkRep} target="blank">
+              GitHub
+            </a>
+            .
           </p>
         </div>
       </ContainerItens>
