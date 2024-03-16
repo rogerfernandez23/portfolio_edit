@@ -37,24 +37,41 @@ function ProjectMarket({ onClose }) {
 
         <div className="text">
           <h2>DESCRIÇÃO</h2>
-          <p>
+          <p className="description -a">
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. <br />
+            Aliado ao site da Federação ACPBM, teremos o marketplace. Este
+            projeto tem como finalidade a exploração na utilização de novas
+            tecnologias, onde irei aprofundar meus conhecimentos em uma
+            aplicação que exigirá funcionalidades e metodologias de
+            desenvolvimento, tais como:
             <br />
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            <br />• <b>Pesquisa e Filtros:</b> Implementação de recursos que
+            permitam aos usuários buscar produtos ou serviços específicos e
+            aplicar filtros para refinar os resultados de acordo com suas
+            preferências.
+            <br />• <b>Carrinho de Compras e Checkout:</b> Desenvolvimento de
+            funcionalidades que possibilitem aos usuários adicionar itens ao
+            carrinho, revisá-lo e finalizar a compra de forma segura e
+            eficiente.
+            <br />• <b>Sistemas e APIs de Pagamentos:</b> Integração com métodos
+            de pagamento, como cartões de crédito, débito, carteiras digitais,
+            entre outros, através de APIs de terceiros, garantindo uma
+            experiência de compra fluida e segura.
+            <br />• <b>Atendimento ao Cliente:</b> Implementação de recursos
+            para fornecer suporte aos usuários, como chat ao vivo, FAQs
+            (Perguntas Frequentes), visando garantir uma comunicação eficaz e
+            resolver possíveis dúvidas ou problemas dos clientes.
+            <br />• <b>Notificações em Tempo Real:</b> Desenvolvimento de um
+            sistema de notificações que mantenha os usuários informados sobre
+            atividades relevantes, como atualizações de pedido, promoções
+            especiais, utilizando tecnologias que oferecem comunicação em tempo
+            real, como WebSockets (Socket.IO). <br />
+            <br />
+            <b>
+              Este projeto ainda está em fase de arquitetura e design, e em
+              breve trarei atualizações sobre o seu desenvolvimento e
+              implementação.
+            </b>
           </p>
         </div>
       </ContainerItens>

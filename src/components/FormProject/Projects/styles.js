@@ -107,7 +107,7 @@ export const ContainerItens = styled.div`
   }
 
   .market-h1 {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 900;
     margin-bottom: 20px;
 
@@ -154,6 +154,18 @@ export const ContainerItens = styled.div`
 
     @media ${breakepoints.md} {
       font-size: 10px;
+    }
+  }
+
+  .-a {
+    margin-top: 0px;
+  }
+
+  .-b {
+    font-size: 15px;
+
+    @media ${breakepoints.al} {
+      font-size: 12px;
     }
   }
 
@@ -216,7 +228,6 @@ export const ContainerItens = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
     width: 400px;
     height: 240px;
     color: white;
