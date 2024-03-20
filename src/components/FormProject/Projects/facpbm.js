@@ -20,7 +20,7 @@ function ProjectOne({ onClose }) {
   const linkFig =
     'https://www.figma.com/file/YrYgEubnF3BEStZMIbvC35/Federa%C3%A7%C3%A3o-ACPBM-Site?type=design&t=GiyXXlMVI6N3SUr9-6';
   const linkRep = 'https://github.com/rogerfernandez23/acpbm-site';
-  const deploy = 'https://facpbm.netifly.app';
+  const deploy = 'https://facpbm.netlify.app/';
 
   return (
     <Container>
