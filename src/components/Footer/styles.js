@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 import CurLogoColor from '../../assets/curriculo_color.png';
 import GitLogoOrange from '../../assets/git_logo_orange.png';
+import InstaLogoColor from '../../assets/instagram_logo_color.png';
 import LinkLogoBlue from '../../assets/linkedin_logo_blue.png';
+import WhatsColor from '../../assets/whats_logo_color.png';
 import breakepoints from '../../styles/breakepoints';
 
 export const Container = styled.div`
@@ -16,6 +18,11 @@ export const Container = styled.div`
   height: 30vh;
   padding: 50px;
 
+  @media ${breakepoints.smd} {
+    padding: 30px;
+    gap: 40px;
+  }
+
   @media ${breakepoints.sm} {
     height: 20vh;
   }
@@ -25,12 +32,20 @@ export const ContainerItens = styled.div`
   display: flex;
   gap: 20px;
 
+  @media ${breakepoints.smf} {
+    gap: 10px;
+  }
+
   img {
     width: 40px;
     cursor: pointer;
     transition: transform 0.8s ease;
 
-    @media ${breakepoints.sm} {
+    @media ${breakepoints.smd} {
+      width: 35px;
+    }
+
+    @media ${breakepoints.smf} {
       width: 25px;
     }
 
@@ -51,10 +66,26 @@ export const ContainerItens = styled.div`
     }
   }
 
+  .whats {
+    &:hover {
+      content: url(${WhatsColor});
+    }
+  }
+
+  .insta {
+    &:hover {
+      content: url(${InstaLogoColor});
+    }
+  }
+
   .cur {
     width: 42px;
 
-    @media ${breakepoints.sm} {
+    @media ${breakepoints.smd} {
+      width: 35px;
+    }
+
+    @media ${breakepoints.smf} {
       width: 28px;
     }
 
@@ -70,7 +101,11 @@ export const ContainerName = styled.div`
     font-weight: 800;
     color: white;
 
-    @media ${breakepoints.sm} {
+    @media ${breakepoints.smd} {
+      font-size: 24px;
+    }
+
+    @media ${breakepoints.smf} {
       font-size: 20px;
     }
   }
@@ -80,15 +115,15 @@ export const ContainerName = styled.div`
     font-weight: 500;
     color: #f39303;
 
-    @media ${breakepoints.smd} {
-      font-size: 14px;
-    }
-
-    @media ${breakepoints.smf} {
+    @media ${breakepoints.md} {
       font-size: 12px;
     }
 
-    @media ${breakepoints.sm} {
+    @media ${breakepoints.smd} {
+      font-size: 10px;
+    }
+
+    @media ${breakepoints.smf} {
       font-size: 8px;
     }
   }

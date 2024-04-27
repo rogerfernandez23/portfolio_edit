@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 
-import Seta from '../../assets/seta_icon.png';
+import Seta from '../../assets/seta_icon_black.png';
 import { ScrollToTopButton } from './styles';
 
 function ScrollToTop() {

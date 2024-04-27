@@ -31,7 +31,6 @@ export const ScrollToTopButton = styled.button`
   img {
     width: 30px;
     margin-top: 5px;
-    transform: rotate(-90deg);
   }
 
   &:hover {
